@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function FicheLogement() {
+
+export default function APropos() {
     return (
          <div>
             <h1>A Propos</h1>

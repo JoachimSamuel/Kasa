@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-
- function carte() {
+ function Carte() {
 
     // state (état, données)
   
@@ -10,14 +10,14 @@ import React from "react";
     //return (render)
     return (
         <div>
-            <div>
-                <div>
-                    <img src=""></img>
-                    <h4>Titre de la location</h4>
-                </div>
-            </div>
+        <div>
+          <div>
+            <img src="" alt="Image de la location" />
+            <Link to="/fiche-logement">Titre de la location</Link>
+          </div>
         </div>
-   
+      </div>
+ 
     )
 }
-export default carte;
+export default Carte;
