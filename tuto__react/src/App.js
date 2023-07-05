@@ -8,7 +8,9 @@ import Error from "./Components/Eror/404";
 import APropos  from "./Components/A Propos/A propos";
 
 
+
 import Navbar from './Components/Header/navbar';
+import Footer from './Components/footer/footer';
 
 
 
@@ -22,6 +24,7 @@ function App(){
         <Route path='*' element={<Error />} />
         <Route path='/A-Propos' element={<APropos />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
