@@ -1,4 +1,6 @@
 import React from "react";
+import WhiteLogo from "../images/logo.png"
+
 
 function Footer() {
 
@@ -10,7 +12,7 @@ function Footer() {
     return (
         <footer>
              <div className="contenair-footer" >
-                <div className="kasa-t">KASA</div>
+             <img src={WhiteLogo} alt="Logo Kasa" className="logo-Kasa-white" />
                 <p>© 2020 Kasa, All rights reserved</p>
             </div>
         </footer>
