@@ -4,9 +4,9 @@ const Carrousel = () => {
   return (
     <div className="carrousel">
       {/* Contenu du carrousel */}
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
+      <img src="" alt="Image 1" />
+      <img src="" alt="Image 2" />
+      <img src="" alt="Image 3" />
     </div>
   );
 };

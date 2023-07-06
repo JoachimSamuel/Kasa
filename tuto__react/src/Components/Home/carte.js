@@ -1,23 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
- function Carte() {
-
-    // state (état, données)
-  
-    //comportements
-
-    //return (render)
-    return (
-        <div>
-        <div>
-          <div>
+function Carte() {
+  return (
+    <Link to="/fiche-logement">
+        <div className="carte">
             <img src="" alt="Image de la location" />
-            <Link to="/fiche-logement">Titre de la location</Link>
-          </div>
+            <span className="carte-titre">Titre de la location</span>
         </div>
-      </div>
- 
-    )
+    </Link>
+  );
 }
+
 export default Carte;

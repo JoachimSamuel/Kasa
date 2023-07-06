@@ -8,13 +8,12 @@ function Footer() {
 
     //return (render)
     return (
-        <div>
-             <div>
-                <div>KASA</div>
-                <h4>2020 Kasa,All rights reserved</h4>
+        <footer>
+             <div className="contenair-footer" >
+                <div className="kasa-t">KASA</div>
+                <p>© 2020 Kasa, All rights reserved</p>
             </div>
-        </div>
-   
+        </footer>
     )
 }
 export default Footer;
