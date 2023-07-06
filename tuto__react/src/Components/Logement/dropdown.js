@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-
+import React, { useState } from 'react';
+import Arrow from "../images/arrow_back_ios-24px 2.png";
 
 function Dropdown() {
-  // state (état, données)
   const [isOpen, setIsOpen] = useState(false);
 
-  //comportements
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  //return (render)
   return (
     <div className="dropdown">
-      <button className="dropdown-toggle" onClick={toggleDropdown}>
-        Sélectionner une option
+      <button className={`dropdown-toggle ${isOpen ? 'active' : ''}`} onClick={toggleDropdown}>
+        <p>Sélectionner une option</p>
+        <span className={`arrow ${isOpen ? 'rotate' : ''}`}>
+          <img src={Arrow} alt="arrow" />
+        </span>
       </button>
       {isOpen && (
         <ul className="dropdown-menu">
@@ -26,5 +26,6 @@ function Dropdown() {
     </div>
   );
 }
+
 
 export default Dropdown;
