@@ -10,7 +10,7 @@ function Footer() {
 
     //return (render)
     return (
-        <footer>
+        <footer className=".exclude-margin">
              <div className="contenair-footer" >
              <img src={WhiteLogo} alt="Logo Kasa" className="logo-Kasa-white" />
                 <p>© 2020 Kasa, All rights reserved</p>

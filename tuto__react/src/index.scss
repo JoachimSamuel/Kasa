@@ -2,8 +2,8 @@
   --primary-color:#FF6060;
   --secondary-color: #FFFFFF;
 }
-html, body{
-  margin:0;
+body{
+  margin:0 2rem;
   padding: 0;
   height: 100%;
   overflow-x: hidden;
@@ -26,35 +26,39 @@ h1, h2, h3, h4, a, p{
 }
 
 
-//***************** Header ********************//
-.navbar{
+/* Header */
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 7rem;
-  margin-right: 7rem;
   margin-top: 2rem;
+  margin-left: 6vw;
+  margin-right: 6vw;
 }
-.navbar img{
+
+.navbar img {
   width: 8rem;
 }
-.navbar ul{
+
+.navbar ul {
   display: flex;
 }
-.navbar ul>li{
-list-style: none;
-margin-left: 3rem;
+
+.navbar ul > li {
+  list-style: none;
+  margin-left: 3rem;
 }
-.navbar ul>li>a{
+
+.navbar ul > li > a {
   color: var(--primary-color);
 }
-.navbar ul>li>a:hover{
+
+.navbar ul > li > a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-
-//***************** Footer ********************//
+/* Footer */
 footer {
   display: flex;
   height: 13rem;
@@ -65,111 +69,86 @@ footer {
   overflow: hidden;
   background-color: #000;
   flex-shrink: 0;
+  margin-left: -10vw;
+  margin-right: -10vw;
+  flex-shrink: 0;
 }
 
-
-.contenair-footer p{
+.contenair-footer p {
   color: var(--secondary-color);
   font-size: 1.5rem;
-  padding: 0 29rem 1.8125rem 28.9375rem;
-} 
+}
 
-
-//***************** Home Page  ********************//
-.contenair_carte{
+/* Home Page */
+.contenair_carte {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
-
   background-color: #FF6060;
   border-radius: 1.5625rem;
   border: 25px;
 }
-.carte{
-  margin: 2.5rem;
+
+.carte {
+  margin: 2rem;
   width: 21.25rem;
   height: 21.25rem;
   position: relative;
-
   border-radius: 0.625rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
 }
-.carte-titre{
+
+.carte-titre {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-
   color: var(--secondary-color);
 }
-.banner{
+
+.banner {
   position: relative;
   margin: 3rem auto 6rem;
   width: 90%;
   height: 15em;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 1.5625rem;
-
- 
   overflow: hidden;
 }
-.banner img{
+
+.banner img {
   border-radius: 1.5625rem;
   width: 100%;
   filter: brightness(0.6);
   object-fit: cover;
 }
-.banner h1{
+
+.banner h1 {
   position: absolute;
   color: var(--secondary-color);
 }
-//*****Carrousel******//
-.carrousel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.prev-btn, .next-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 2rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.carrousel-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-
-//***************** 404 Page  ********************// 
-.contenair-error{
+/* 404 Page */
+.contenair-error {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
 }
-.contenair-error h1{
+
+.contenair-error h1 {
   color: var(--primary-color);
   font-size: 10vw;
   font-weight: 700;
   margin: 0rem;
 }
-.contenair-error p{
+
+.contenair-error p {
   color: var(--primary-color);
   font-size: 2.5vw;
   font-family: Montserrat;
@@ -177,7 +156,8 @@ footer {
   font-weight: 500;
   line-height: 142.6%;
 }
-.contenair-error button{
+
+.contenair-error button {
   border: none;
   color: var(--primary-color);
   font-size: 1.5vw;
@@ -188,13 +168,13 @@ footer {
   text-decoration-line: underline;
   background-color: white;
 }
-.contenair-error button a{
+
+.contenair-error button a {
   color: var(--primary-color);
 }
 
-
-//***************** Fiche Logement ********************/
-$margin-horizontal: 7rem;
+/* Fiche Logement */
+$margin-horizontal: 6vw;
 $margin-vertical: 2rem;
 
 .location-details,
@@ -202,25 +182,23 @@ $margin-vertical: 2rem;
 .contenair-dropdown {
   display: flex;
   justify-content: space-between;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: $margin-horizontal;
+  margin-right: $margin-horizontal;
 }
 
 .location-details {
   flex-wrap: wrap;
-
   h1,
   p {
     color: var(--primary-color);
+    margin-top: 0;
   }
-
   h1 {
     margin: 0;
     line-height: 142.6%;
     font-size: 2.25rem;
     font-weight: 500;
   }
-
   p {
     font-size: 1.125rem;
     font-family: Montserrat;
@@ -230,11 +208,16 @@ $margin-vertical: 2rem;
   }
 }
 
+.location-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .card {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   p {
     margin: 0.5rem;
   }
@@ -254,44 +237,47 @@ $margin-vertical: 2rem;
     font-weight: 500;
     margin: 0.3rem 1rem;
   }
-
   background-color: var(--primary-color);
   border-radius: 0.625rem;
 }
-.contenair-dropdown{
-  margin-top: 2rem;
-}
 
-
-//***************** A Propos ********************//
+/* A Propos */
 .apropos-contenair-dropdown {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 6vw;
+  margin-right: 6vw;
 }
-.apropos-contenair-dropdown> .dropdown{
-margin-top: 3rem;
+
+.apropos-contenair-dropdown > .dropdown {
+  margin-top: 3rem;
 }
+
 .apropos-contenair-dropdown > .dropdown:last-child {
   margin-bottom: 5rem;
 }
 
-//***************** Dropdown ********************//
+/* Dropdown */
 .dropdown {
   position: relative;
+  width: 100%;
 }
+
 .dropdown-toggle {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 0.3rem;
   cursor: pointer;
   padding: 0.5rem;
-  gap: 10rem;
+  width: 100%;
 }
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -304,20 +290,24 @@ margin-top: 3rem;
   list-style: none;
   border: none;
   overflow: auto;
-  width: 22rem; ///Voir avec mentor : la liste ne sajuste pas aux btn 
+  width: 22rem;
 }
+
 .dropdown-menu li {
   padding: 0.5rem;
   cursor: pointer;
 }
+
 .dropdown-toggle.active + .dropdown-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .dropdown-toggle .arrow {
   transition: transform 0.3s ease;
 }
+
 .dropdown-toggle.active .arrow {
   transform: scaleY(-1);
 }
