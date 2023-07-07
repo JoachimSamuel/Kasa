@@ -31,6 +31,9 @@ const Carrousel = () => {
       <button className="next-btn" onClick={nextImage}>
         &#8250;
       </button>
+
+      {/* Compteur d'images */}
+      <div className="counter">{`${currentImage + 1} / ${images.length}`}</div>
     </div>
   );
 };

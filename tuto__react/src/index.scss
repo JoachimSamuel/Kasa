@@ -25,18 +25,25 @@ h1, h2, h3, h4, a, p{
   font-family: 'Montserrat', sans-serif;
 }
 
+
 //***************** Header ********************//
 .navbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-top: 2rem;
+}
+.navbar img{
+  width: 8rem;
 }
 .navbar ul{
-  display:flex;
+  display: flex;
 }
 .navbar ul>li{
 list-style: none;
-margin-left:3rem;
+margin-left: 3rem;
 }
 .navbar ul>li>a{
   color: var(--primary-color);
@@ -45,6 +52,8 @@ margin-left:3rem;
   cursor: pointer;
   text-decoration: underline;
 }
+
+
 //***************** Footer ********************//
 footer {
   display: flex;
@@ -64,6 +73,7 @@ footer {
   font-size: 1.5rem;
   padding: 0 29rem 1.8125rem 28.9375rem;
 } 
+
 
 //***************** Home Page  ********************//
 .contenair_carte{
@@ -89,7 +99,6 @@ footer {
   border-radius: 0.625rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
 }
-
 .carte-titre{
   position: absolute;
   bottom: 1rem;
@@ -97,7 +106,6 @@ footer {
 
   color: var(--secondary-color);
 }
-
 .banner{
   position: relative;
   margin: 3rem auto 6rem;
@@ -130,8 +138,7 @@ footer {
   justify-content: space-between;
 }
 
-.prev-btn,
-.next-btn {
+.prev-btn, .next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +149,6 @@ footer {
   border: none;
   cursor: pointer;
 }
-
 .carrousel-image {
   max-width: 100%;
   max-height: 100%;
@@ -150,21 +156,19 @@ footer {
 }
 
 
-//***************** 404 Page  ********************//
+//***************** 404 Page  ********************// 
 .contenair-error{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
 }
-
 .contenair-error h1{
   color: var(--primary-color);
   font-size: 10vw;
   font-weight: 700;
   margin: 0rem;
 }
-
 .contenair-error p{
   color: var(--primary-color);
   font-size: 2.5vw;
@@ -193,7 +197,6 @@ footer {
 .dropdown {
   position: relative;
 }
-
 .dropdown-toggle {
   display: flex;
   align-items: center;
@@ -205,7 +208,6 @@ footer {
   padding: 0.5rem;
   gap: 10rem;
 }
-
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -220,22 +222,18 @@ footer {
   overflow: auto;
   width: 22rem; ///Voir avec mentor : la liste ne sajuste pas aux btn 
 }
-
 .dropdown-menu li {
   padding: 0.5rem;
   cursor: pointer;
 }
-
 .dropdown-toggle.active + .dropdown-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .dropdown-toggle .arrow {
   transition: transform 0.3s ease;
 }
-
 .dropdown-toggle.active .arrow {
   transform: scaleY(-1);
 }

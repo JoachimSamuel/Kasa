@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
+import logo from "../images/logo_red.png";
+
 
 const Navbar = () => {
     
     return ( 
         <header>
             <nav className="navbar">
-                <a href="">LOGO</a>
+                <img src={logo} alt="logo kasas red" className='logo-red' />
                 <ul>
                     <li>
                         <Link to="/" className="lien">Acceuil</Link>
