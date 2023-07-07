@@ -12,7 +12,6 @@ const RatingStars = ({ rating }) => {
 
   return (
     <div>
-      <h1>Mon composant avec 5 étoiles</h1>
       <div>
         <FaStar color={getColor(1)} />
         <FaStar color={getColor(2)} />
