@@ -11,15 +11,13 @@ const RatingStars = ({ rating }) => {
   };
 
   return (
-    <div>
-      <div>
+      <div className="stars">
         <FaStar color={getColor(1)} />
         <FaStar color={getColor(2)} />
         <FaStar color={getColor(3)} />
         <FaStar color={getColor(4)} />
         <FaStar color={getColor(5)} />
       </div>
-    </div>
   );
 };
 

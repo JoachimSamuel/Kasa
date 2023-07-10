@@ -197,7 +197,45 @@ footer {
 /* Fiche Logement */
 $margin-horizontal: 6vw;
 $margin-vertical: 2rem;
+.carrousel{
+  position: relative;
+  margin-top: 3rem;
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 8em;
+}
+.prev-btn {
+  left: 7rem;
+}
+.next-btn {
+  right: 7rem;
+}
 
+.counter{
+  position: absolute;
+  bottom: 1rem; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: white;
+  font-size: 1rem;
+  z-index: 2;
+
+  font-size: 1.125rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+}
 .carrousel-image{
 width: 89%;
 aspect-ratio: 16/9;
@@ -213,6 +251,8 @@ border-radius: 1.5625rem;
   justify-content: space-between;
   margin-left: $margin-horizontal;
   margin-right: $margin-horizontal;
+  gap: 3rem;
+  margin-top: 1rem;
 }
 
 .location-details {
@@ -242,19 +282,23 @@ border-radius: 1.5625rem;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .card {
   display: flex;
   flex-direction: row;
   align-items: center;
   p {
-    margin: 0.5rem;
+    margin: 2rem;
+    width: 3rem;
   }
 }
 .card > img{
   width: 5rem;
   border-radius: 50%;
   overflow: hidden;
+}
+.stars{
+  font-size: 1.5rem;
+
 }
 .tags-container {
   display: flex;
@@ -279,7 +323,6 @@ border-radius: 1.5625rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin-left: 6vw;
   margin-right: 6vw;
 }
@@ -294,9 +337,11 @@ border-radius: 1.5625rem;
 
 /* Dropdown */
 .dropdown {
-  position: relative;
-  width: 100%;
+  display: inline-block;
+  width: 100%; /* Permet au dropdown d'être affiché comme un élément dans le flux */
+  gap:1rem;
 }
+
 
 .dropdown-toggle {
   display: flex;
@@ -305,25 +350,28 @@ border-radius: 1.5625rem;
   background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 0.3rem;
+  border-radius: 1em;
   cursor: pointer;
   padding: 0.5rem;
   width: 100%;
+  gap: 1rem;
 }
 
 .dropdown-menu {
   display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
+  position: relative; /* Modifiez la position en relative */
   background-color: #F6F6F6;
   color: var(--primary-color);
+  border-radius:  0.3125rem;
   padding: 0;
   margin: 0;
+  margin-bottom: 1rem;
   list-style: none;
   border: none;
-  overflow: auto;
-  width: 22rem;
+}
+.dropdown-menu p:last-child{
+  margin: 0;
+  padding: 1rem;
 }
 
 .dropdown-menu li {
@@ -332,15 +380,5 @@ border-radius: 1.5625rem;
 }
 
 .dropdown-toggle.active + .dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.dropdown-toggle .arrow {
-  transition: transform 0.3s ease;
-}
-
-.dropdown-toggle.active .arrow {
-  transform: scaleY(-1);
+  display: block; /* Affiche le menu déroulant lorsque le toggle est actif */
 }

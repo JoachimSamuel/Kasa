@@ -4,6 +4,7 @@ import Carrousel from "./carrousel";
 import MyDropdown from "./dropdown";
 import RatingStars from "./RatingStars";
 import Tag from "./tag";
+import Modal from './modal';
 
 const FicheLogement = () => {
   const { id } = useParams(); // Récupère la valeur de l'ID depuis les paramètres de l'URL
@@ -43,6 +44,7 @@ const FicheLogement = () => {
   return (
     <main>
       <Carrousel images={pictures} />
+    
       <div className="fiche-details">
         <div className="location-details">
           <div className="location-title">
@@ -62,7 +64,7 @@ const FicheLogement = () => {
               <Tag key={index} name={tag} />
             ))}
           </div>
-          <RatingStars rating={rating} />
+          <RatingStars rating={rating}  />
         </div>
       </div>
       <div className="contenair-dropdown">
