@@ -207,7 +207,7 @@ footer {
   height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 3rem;
+  border-radius: 1.5625rem;
 }
 
 .location-details,

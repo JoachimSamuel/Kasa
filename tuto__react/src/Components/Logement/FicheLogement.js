@@ -37,7 +37,7 @@ const FicheLogement = () => {
 
   
   
-  const { title, pictures, description, host, rating, location, tags } = projectData;
+  const { title, pictures, description, host, rating, location, tags, equipments } = projectData;
   console.log(projectData)
 
   return (
@@ -66,8 +66,8 @@ const FicheLogement = () => {
         </div>
       </div>
       <div className="contenair-dropdown">
-        <MyDropdown />
-        <MyDropdown />
+      <MyDropdown title="Description" options={[description]} />
+      <MyDropdown title="Equipments" options={equipments} />
       </div>
     </main>
   );
