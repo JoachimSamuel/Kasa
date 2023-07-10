@@ -22,7 +22,7 @@ function App(){
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/fiche-logement' element={<FicheLogement/>} />
+        <Route path='/fiche-logement/:id' element={<FicheLogement/>} />
         <Route path='*' element={<Error />} />
         <Route path='/A-Propos' element={<APropos />} />
       </Routes>
@@ -31,29 +31,4 @@ function App(){
   )
 }
 export default App;
-
-
-
-
-
-
-
-
-//function Thumb() {
- 
- 
-  // state (état, données)
-  
-  //comportements
-
-  //affichage (render)
-
-  //return (
-    //<div>
-    // <image></image>
-    // <p>test</p>
-    //</div>
-  //)
-//}
-
 

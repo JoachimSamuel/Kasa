@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 
-const Carrousel = () => {
+const Carrousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
-
-  const images = [
-    { src: 'image1.jpg', alt: 'Image 1' },
-    { src: 'image2.jpg', alt: 'Image 2' },
-    { src: 'image3.jpg', alt: 'Image 3' },
-  ];
 
   const nextImage = () => {
     setCurrentImage((prevImage) => (prevImage === images.length - 1 ? 0 : prevImage + 1));
@@ -25,7 +19,12 @@ const Carrousel = () => {
       </button>
 
       {/* Image courante */}
-      <img className="carrousel-image" src={images[currentImage].src} alt={images[currentImage].alt} />
+      <img
+              className="carrousel-image"
+              src={process.env.PUBLIC_URL + images[currentImage]}
+              alt={images[currentImage].alt}
+            />
+
 
       {/* Bouton "Suivant" */}
       <button className="next-btn" onClick={nextImage}>

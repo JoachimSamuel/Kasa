@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import Carte from "./carte";
 import Banner from "../banner";
 
@@ -23,9 +24,11 @@ function Home() {
     <div>
       <Banner />
       <div className="contenair_carte">
-      {cartesData.map((carte) => (
-        <Carte key={carte.id} title={carte.title} cover={carte.cover} />
-      ))}
+        {cartesData.map((carte) => (
+          <Link key={carte.id} to={`/fiche-logement/${carte.id}`}>
+            <Carte title={carte.title} cover={carte.cover} />
+          </Link>
+        ))}
       </div>
     </div>
   );
