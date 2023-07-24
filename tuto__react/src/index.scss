@@ -100,9 +100,9 @@ footer {
 }
 
 .carte {
-  margin: 2rem;
+  margin: 1rem;
   position: relative;
-  min-width: 50%;
+ max-width: 22rem;
 }
 .carte::after {
   content: "";
@@ -420,6 +420,7 @@ white-space: nowrap;
 .contenair_carte{
   background-color: transparent;
   justify-content: center;
+  
 }
 
 .banner {
@@ -435,7 +436,6 @@ white-space: nowrap;
 .carte{
   margin: 0;
   margin-bottom: 2rem;
-
 }
 
 /* Fiche Logement */
