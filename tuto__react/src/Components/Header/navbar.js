@@ -10,7 +10,7 @@ const Navbar = () => {
                 <img src={logo} alt="logo kasas red" className='logo-red' />
                 <ul>
                     <li>
-                        <Link to="/" className="lien">Acceuil</Link>
+                        <Link to="/" className="lien">Accueil</Link>
                     </li>
                     <li>
                         <Link to="/A-Propos" className="lien">A Propos</Link>
