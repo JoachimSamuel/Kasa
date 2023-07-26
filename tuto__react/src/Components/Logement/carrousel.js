@@ -14,25 +14,28 @@ const Carrousel = ({ images }) => {
   return (
     <div className="carrousel">
       {/* Bouton "Précédent" */}
-      <button className="prev-btn" onClick={prevImage}>
-        &#8249;
-      </button>
+      {images.length > 1 && (
+        <button className="prev-btn" onClick={prevImage}>
+          &#8249;
+        </button>
+      )}
 
       {/* Image courante */}
       <img
-              className="carrousel-image"
-              src={process.env.PUBLIC_URL + images[currentImage]}
-              alt={images[currentImage].alt}
-            />
-
+        className="carrousel-image"
+        src={process.env.PUBLIC_URL + images[currentImage]}
+        alt={images[currentImage].alt}
+      />
 
       {/* Bouton "Suivant" */}
-      <button className="next-btn" onClick={nextImage}>
-        &#8250;
-      </button>
+      {images.length > 1 && (
+        <button className="next-btn" onClick={nextImage}>
+          &#8250;
+        </button>
+      )}
 
       {/* Compteur d'images */}
-      <div className="counter">{`${currentImage + 1} / ${images.length}`}</div>
+      {images.length > 1 && <div className="counter">{`${currentImage + 1} / ${images.length}`}</div>}
     </div>
   );
 };

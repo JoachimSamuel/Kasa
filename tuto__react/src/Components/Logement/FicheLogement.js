@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Carrousel from "./carrousel";
 import MyDropdown from "./dropdown";
 import RatingStars from "./RatingStars";
 import Tag from "./tag";
 import Modal from './modal';
+import Error from "../Eror/404";
 
 const FicheLogement = () => {
   const { id } = useParams(); // Récupère la valeur de l'ID depuis les paramètres de l'URL
@@ -33,7 +34,11 @@ const FicheLogement = () => {
   }
 
   if (!projectData) {
-    return <div>Project not found</div>;
+    return (
+    <div>
+    <Error />
+    </div>
+    )
   }
 
   
