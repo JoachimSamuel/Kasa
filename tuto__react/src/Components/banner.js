@@ -10,7 +10,8 @@ function Banner() {
       {isHomePage ? (
         <>
           <img src={img1} alt="rocher " />
-          <h1>Chez vous, partout et ailleurs</h1>
+          <h1>Chez vous, <br />
+           partout et ailleurs</h1>
         </>
       ) : (
         <img src={img2} alt="rocher " />

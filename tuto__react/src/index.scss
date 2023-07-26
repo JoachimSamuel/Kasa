@@ -120,7 +120,7 @@ footer {
 .carte img{
   object-fit: cover;
   width: 100%;
-  min-height: 13rem;
+  min-height: 18rem;
   position: relative;
   border-radius: 0.625rem;
 }
@@ -147,7 +147,9 @@ footer {
   border-radius: 1.5625rem;
   overflow: hidden;
 }
-
+.banner h1 br {
+  display: none; /* Masquer le saut de ligne dans la version desktop */
+}
 .banner img {
   border-radius: 1.5625rem;
   width: 100%;
@@ -309,6 +311,7 @@ border-radius: 1.5625rem;
 }
 .tags-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 2rem;
 }
@@ -360,7 +363,6 @@ border-radius: 1.5625rem;
   padding: 0.5rem;
   width: 100%;
   gap: 1rem;
-  margin-bottom: 2rem;
 }
 
 .dropdown-menu {
@@ -379,6 +381,7 @@ border-radius: 1.5625rem;
   margin: 0;
   text-align: left;
   margin-left: 0.5em;
+  padding: 1rem;
 }
 .dropdown-menu li {
   margin: 0;
@@ -399,6 +402,10 @@ border-radius: 1.5625rem;
 
 
 
+
+
+
+
 /*Mobil */
 
 @media (max-width: 769px){
@@ -410,11 +417,12 @@ body{
   padding-left: 1.5em;
 }
 .navbar ul>li{
-  margin-left: 0.9em;
+  margin-left: 0.8em;
 }
 .navbar ul>li>a{
-  font-size: 0.9em;
-white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  white-space: nowrap;
 }
 /*Home */
 .contenair_carte{
@@ -425,10 +433,14 @@ white-space: nowrap;
 
 .banner {
   height: 7em;
+  justify-content: flex-start;
+}
+.banner h1 br {
+    display:block; 
 }
 .banner h1{
   text-align: start;
-  margin-left: 0.5em;
+  margin-left: 1em;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 100%;
@@ -440,10 +452,34 @@ white-space: nowrap;
 
 /* Fiche Logement */
 .next-btn{
-  right: 1rem;
+  right: 2rem;
 }
 .prev-btn{
-  left: 1rem;
-
+  left: 2rem;
+}
+.carrousel-image{
+  height: 100%;
+}
+.counter{
+  display: none;
+}
+.location-details h1{
+   font-size: 18px;
+   text-align: start;
+}
+.location-details p{
+  font-size: 14px;
+  text-align: start ;
+}
+.contenair-dropdown{
+  display: flex;
+  flex-direction: column;
+}
+.property-info{
+  display: flex;
+  flex-direction: column;
+}
+.tags-container{
+  gap: 1rem
 }
 }
