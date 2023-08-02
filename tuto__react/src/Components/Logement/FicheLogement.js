@@ -51,26 +51,27 @@ const FicheLogement = () => {
       <Carrousel images={pictures} />
     
       <div className="fiche-details">
-        <div className="location-details">
+
           <div className="location-title">
             <h1>{title}</h1>
             <p>{location}</p>
           </div>
+         
           <div className="card">
             <div className="card-name">
               <p>{host.name}</p>
             </div>
             <img src={host.picture} alt="Card" />
           </div>
-        </div>
-        <div className="property-info">
+
+       
           <div className="tags-container">
             {tags.map((tag, index) => (
               <Tag key={index} name={tag} />
             ))}
           </div>
           <RatingStars rating={rating}  />
-        </div>
+      
       </div>
       <div className="contenair-dropdown">
       <MyDropdown title="Description" options={[description]} />
