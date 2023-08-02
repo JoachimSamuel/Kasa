@@ -1,26 +1,20 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
 
 const RatingStars = ({ rating }) => {
-  const getColor = (index) => {
-    if (rating >= index) {
-      return '#FF6060'; 
-    } else {
-      return 'gray'; 
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      const starColor = rating >= i ? '#FF6060' : 'gray';
+      stars.push(<div key={i} className="star" style={{ backgroundColor: starColor }} />);
     }
+    return stars;
   };
 
   return (
-      <div className="stars">
-        <FaStar color={getColor(1)} />
-        <FaStar color={getColor(2)} />
-        <FaStar color={getColor(3)} />
-        <FaStar color={getColor(4)} />
-        <FaStar color={getColor(5)} />
-      </div>
+    <div className="stars">
+      {renderStars()}
+    </div>
   );
 };
 
 export default RatingStars;
-
-

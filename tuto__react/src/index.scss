@@ -318,10 +318,27 @@ border-radius: 1.5625rem;
   overflow: hidden;
   margin-left: 1rem;
 }
-.stars{
-  font-size: 1.5rem;
+/* Stars */
 
+.star {
+  display: inline-block;
+  width: 1.5rem; /* Ajustez la taille de l'étoile selon vos besoins */
+  height: 1.5rem; /* Ajustez la taille de l'étoile selon vos besoins */
+  background-color: gray; /* Couleur de l'étoile par défaut */
+  clip-path: polygon(
+    50% 0%,
+    61.8% 38.2%,
+    100% 35.4%,
+    68.2% 57.3%,
+    79.1% 91.6%,
+    50% 70%,
+    20.9% 91.6%,
+    31.8% 57.3%,
+    0% 35.4%,
+    38.2% 38.2%
+  ); /* Crée la forme d'une étoile à l'aide de clip-path */
 }
+
 .tags-container {
   display: flex;
   flex-wrap: wrap;
@@ -484,13 +501,35 @@ body{
 .counter{
   display: none;
 }
-.location-details h1{
+
+.location-title {
+  grid-area: 1 / 1 / 2 / 3;
+  text-align: start;
+}
+.card {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.tags-container{
+  grid-area: 2 / 1 / 3 / 4; 
+}
+.stars{
+  grid-area: 3 / 1 / 4 / 2 ;
+}
+
+.fiche-details h1{
    font-size: 18px;
    text-align: start;
 }
-.location-details p{
+.fiche-details p{
   font-size: 14px;
-  text-align: start ;
+}
+.card p{
+  text-align: right;
+  font-size: 0.75rem;
+}
+.card > img{
+  margin-left: 0rem;
+  width: 3.5rem;
 }
 .contenair-dropdown{
   display: flex;
@@ -504,7 +543,7 @@ body{
   gap: 1rem
 }
 
-/* Fiche Logement */
+/* EROR */
 .contenair-error h1{
   font-size: 35vw;
 }
@@ -515,3 +554,9 @@ body{
   font-size: 3vw;
 }
 }
+
+
+
+
+
+
